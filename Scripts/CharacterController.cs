@@ -27,8 +27,8 @@ public class CharacterController : MonoBehaviour {
 
     void Movement()
     {
-        strafeMovement = new Vector3(strafeInput, 0, forwardInput);
+        strafeMovement = new Vector3(strafeInput * maxVelo, 0, forwardInput * maxVelo);
         rBody = GetComponent<Rigidbody>();
-        rBody.velocity = strafeMovement * maxVelo;
+        rBody.velocity = strafeMovement;
     }
 }
